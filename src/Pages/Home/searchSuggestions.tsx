@@ -1,12 +1,12 @@
 import { Button, ButtonAppearance } from '@tablecheck/tablekit-button';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { LocationSuggestionI } from './fetchAutoComplete';
 
 export function SearchSuggestions(props: {
   suggestions: LocationSuggestionI[];
 }): JSX.Element {
   const { suggestions } = props;
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
   const buttonText = (suggestion: LocationSuggestionI): string =>
     suggestion.payload.term +
     (suggestion.payload.area ? `, [${[suggestion.payload.area]}]` : '');
@@ -14,7 +14,7 @@ export function SearchSuggestions(props: {
   const handleClick = (suggestion: LocationSuggestionI): void => {
     const { lat, lon } = suggestion.payload.geo;
     const url = `/shops/${lat}/${lon}`;
-    // navigate(url);
+    navigate(url);
   };
   return (
     <>

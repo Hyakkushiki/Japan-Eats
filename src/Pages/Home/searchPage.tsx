@@ -32,7 +32,7 @@ export function SearchPage(): JSX.Element {
         });
       }
     },
-    [debouncedInputText] // Only call effect if debounced search term changes
+    [debouncedInputText]
   );
 
   return (
