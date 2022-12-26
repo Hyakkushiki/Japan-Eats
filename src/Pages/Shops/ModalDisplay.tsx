@@ -1,4 +1,4 @@
-import { Descriptions } from 'Common/Description';
+import { Descriptions } from 'Common/Descriptions';
 import { ShopDetails } from 'Common/interfaces';
 import {
   ModalWrapper,

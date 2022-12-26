@@ -1,5 +1,5 @@
 import { PanelPosition } from '@tablecheck/tablekit-panel';
-import { Descriptions } from 'Common/Description';
+import { Descriptions } from 'Common/Descriptions';
 import { ResturantDetailsModalProps, ShopDetails } from 'Common/interfaces';
 import { useState } from 'react';
 import { ModalDisplay } from './ModalDisplay';
