@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { useAsync } from 'react-use';
 
 import { AppThemeProvider } from 'Common/Theme';
-import { Router } from 'Router';
+import { Router } from './router';
 import { getI18nextInstance, initI18n } from 'i18n';
 import { MainWrapper } from 'styles';
 
