@@ -8,9 +8,7 @@ import {
   CardWrapper,
   CardHeadWrapper,
   StyledImg,
-  CardInfoWrapper,
-  CardInfoTitle,
-  CardInfoDetails
+  CardInfoWrapper
 } from './styles';
 
 function ResturantDetailsModal({
@@ -23,7 +21,6 @@ function ResturantDetailsModal({
       onClickCapture={() => setIsOpen(false)}
       onClickOutside={() => setIsOpen(false)}
       position={PanelPosition.Left}
-      width="360px"
       isOpen={isOpen}
     >
       <ModalDisplay shop={resturantData} />
@@ -48,10 +45,7 @@ export function ShopCard(props: { shop: ShopDetails }): JSX.Element {
         <h4>{kana_name}</h4>
       </CardHeadWrapper>
       <CardInfoWrapper>
-        <CardInfoTitle>
-          <p>{content_title.en}</p>
-        </CardInfoTitle>
-        <CardInfoDetails />
+        <div>{content_title.en}</div>
       </CardInfoWrapper>
       <Descriptions cuisines={cuisines} />
 
