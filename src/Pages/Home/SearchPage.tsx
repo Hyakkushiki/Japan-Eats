@@ -5,7 +5,7 @@ import {
   LocationSuggestionI,
   fetchCityAutoComplete
 } from './fetchAutoComplete';
-import { SearchSuggestions } from './searchSuggestions';
+import { SearchSuggestions } from './SearchSuggestions';
 import {
   SearchPageWrapper,
   InputSearchWrapper,
@@ -24,16 +24,13 @@ export function SearchPage(): JSX.Element {
 
   const debouncedInputText: string = useDebounce<string>(inputText, 500);
 
-  useEffect(
-    () => {
-      if (debouncedInputText !== '') {
-        fetchCityAutoComplete(debouncedInputText).then((results) => {
-          setSuggestions(results);
-        });
-      }
-    },
-    [debouncedInputText]
-  );
+  useEffect(() => {
+    if (debouncedInputText !== '') {
+      fetchCityAutoComplete(debouncedInputText).then((results) => {
+        setSuggestions(results);
+      });
+    }
+  }, [debouncedInputText]);
 
   return (
     <SearchPageWrapper>

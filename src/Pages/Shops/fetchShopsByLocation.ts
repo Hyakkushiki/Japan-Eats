@@ -1,5 +1,5 @@
-import { ShopDetails } from "Common/interfaces";
-import { Geocode } from "../Home/fetchAutoComplete";
+import { ShopDetails } from 'Common/interfaces';
+import { Geocode } from '../Home/fetchAutoComplete';
 
 export const fetchShopsByQueryLocation = async (
   geoCode: Geocode

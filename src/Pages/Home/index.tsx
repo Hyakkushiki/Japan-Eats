@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { Outlet } from 'react-router-dom';
-import { SearchPage } from './searchPage';
+import { SearchPage } from './SearchPage';
 
 import { HomeHeadline, HomeWrapper } from './styles';
 

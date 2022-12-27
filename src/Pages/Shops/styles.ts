@@ -71,7 +71,7 @@ export const StyledImg = styled.img`
   border-top-right-radius: 10px;
 `;
 
-export const Description = styled.div`
+export const TagsWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: end;

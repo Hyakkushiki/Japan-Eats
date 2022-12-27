@@ -30,7 +30,14 @@ export function Router({
       >
         <Route index element={<Home />} />
       </Route>
-      <Route path="/shops/:lat/:lon" element={<Shops />} />
+      <Route
+        path="/shops/:lat/:lon"
+        element={
+          <PageLayout isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
+        }
+      >
+        <Route index element={<Shops />} />
+      </Route>
       <Route path="*" element={<Navigate to={`/${language}`} replace />} />
     </Routes>
   );

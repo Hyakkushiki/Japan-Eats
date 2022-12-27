@@ -1,4 +1,4 @@
-import { Descriptions } from 'Common/Descriptions';
+import { TagList } from 'Common/TagList';
 import { ShopDetails } from 'Common/interfaces';
 import {
   ModalWrapper,
@@ -45,7 +45,7 @@ export function ModalDisplay(props: { shop: ShopDetails }): JSX.Element {
     <ModalWrapper>
       <ModalHeadWrapper>
         <h1>{name.en}</h1>
-        <img src={search_image} alt="Resturant Picture" />
+        <img src={search_image} />
       </ModalHeadWrapper>
       <PriceRangeWrapper>
         <div>
@@ -64,8 +64,8 @@ export function ModalDisplay(props: { shop: ShopDetails }): JSX.Element {
         </div>
       </ModalInfoWrapper>
       <div>
-        <Descriptions cuisines={cuisines} />
-        <Descriptions cuisines={tags} backgroundColor="#8f60be" />
+        <TagList items={cuisines} />
+        <TagList items={tags} backgroundColor="#8f60be" />
       </div>
     </ModalWrapper>
   );
