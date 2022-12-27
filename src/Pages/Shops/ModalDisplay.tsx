@@ -2,11 +2,9 @@ import { Descriptions } from 'Common/Descriptions';
 import { ShopDetails } from 'Common/interfaces';
 import {
   ModalWrapper,
-  CardHeadWrapper,
   ModalInfoWrapper,
-  ModalInfoTitle,
-  ModalInfoDetails,
-  ModalImg
+  PriceRangeWrapper,
+  ModalHeadWrapper
 } from './styles';
 
 export function ModalDisplay(props: { shop: ShopDetails }): JSX.Element {
@@ -45,24 +43,30 @@ export function ModalDisplay(props: { shop: ShopDetails }): JSX.Element {
   };
   return (
     <ModalWrapper>
-      <h1>{name.en}</h1>
-      <CardHeadWrapper>
-        <ModalImg src={search_image} alt="Resturant Picture" />
-      </CardHeadWrapper>
-      <div>Lunch: {formatJPYCurrency(budget_lunch_min, budget_lunch_max)}</div>
-      <div>
-        Dinner: {formatJPYCurrency(budget_dinner_min, budget_dinner_max)}
-      </div>
+      <ModalHeadWrapper>
+        <h1>{name.en}</h1>
+        <img src={search_image} alt="Resturant Picture" />
+      </ModalHeadWrapper>
+      <PriceRangeWrapper>
+        <div>
+          Lunch: {formatJPYCurrency(budget_lunch_min, budget_lunch_max)}
+        </div>
+        <div>
+          Dinner: {formatJPYCurrency(budget_dinner_min, budget_dinner_max)}
+        </div>
+      </PriceRangeWrapper>
       <ModalInfoWrapper>
-        <ModalInfoTitle>
+        <h2>
           {content_title.en === undefined ? content_title.ja : content_title.en}
-        </ModalInfoTitle>
-        <ModalInfoDetails>
+        </h2>
+        <div>
           {content_body.en === undefined ? content_body.ja : content_body.en}
-        </ModalInfoDetails>
+        </div>
       </ModalInfoWrapper>
-      <Descriptions cuisines={cuisines} />
-      <Descriptions cuisines={tags} backgroundColor="#8f60be" />
+      <div>
+        <Descriptions cuisines={cuisines} />
+        <Descriptions cuisines={tags} backgroundColor="#8f60be" />
+      </div>
     </ModalWrapper>
   );
 }

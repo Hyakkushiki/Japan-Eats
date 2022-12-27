@@ -87,3 +87,12 @@ export const PageImage = styled.img`
 export const PageLink = styled(Link)`
   ${getLinkStyles};
 `;
+
+export const CenteredColumnContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+`;
